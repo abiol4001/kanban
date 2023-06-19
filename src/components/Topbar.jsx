@@ -16,7 +16,7 @@ const Topbar = () => {
   const [search, setSearch] = useState("")
   return (
     <div>
-      <div className="flex flex-col-reverse md:flex-row h-[110px] md:h-[88px] max-w-[1000] items-center justify-center px-[20px] md:px-[50px] ">
+      <div className="flex flex-col-reverse lg:flex-row h-[110px] lg:h-[88px] max-w-[1000] items-center justify-center px-[20px] md:px-[50px] ">
         <div className="relative w-full">
           <img
             src={searchIcon}
@@ -34,7 +34,7 @@ const Topbar = () => {
           />
         </div>
 
-        <div className="flex gap-10  w-full justify-end">
+        <div className="flex gap-10  w-full justify-end md:justify-between lg:justify-end">
           <div className="flex gap-3 md:gap-6 items-center">
             <img
               src={calender}

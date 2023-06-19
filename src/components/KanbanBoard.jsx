@@ -69,7 +69,7 @@ const KanbanBoard = () => {
   };
 
   return (
-    <div className="px-4 md:px-[50px] flex md:justify-between flex-wrap justify-center w-full gap-3.5">
+    <div className="px-4 md:px-[50px] flex lg:justify-between flex-wrap justify-center w-full gap-3.5">
       <DragDropContext
         onDragEnd={(result) => handleOnDragEnd(result, columns, setColumns)}
       >

@@ -24,7 +24,7 @@ const Displaybar = () => {
         user1, user2, user3, user4
     ]
   return (
-    <div className=" md:px-[50px] py-[41px]">
+    <div className="md:px-[50px] py-[41px]">
       <div className="flex flex-col md:flex-row gap-3 justify-between items-center">
         <div className="flex gap-5 items-center">
           <h2 className="text-[32px] md:text-[42px] text-[#0D062D] font-[600]">Mobile App</h2>
@@ -68,7 +68,7 @@ const Displaybar = () => {
         </div>
       </div>
 
-      <div className="flex gap-3 flex-wrap items-center justify-center md:justify-between mt-[50px]">
+      <div className="flex gap-3 flex-wrap items-center justify-center lg:justify-between mt-[50px]">
         <div className="flex gap-2">
           <button className="border border-[#787486] h-[40px] w-[122px] rounded-[6px] flex items-center gap-2 px-4 hover:border-[#5030E5]">
             <img src={filter} alt="" />

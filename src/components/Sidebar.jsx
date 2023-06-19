@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Icons import
 import logo from "../logo.svg";
@@ -13,8 +13,30 @@ import lamp from "../icons/lamp-on.svg";
 import MiniMenu from "./MiniMenu";
 
 const Sidebar = () => {
-  const [minimizeMenu, setMinimizeMenu] = useState(false)
+  const [minimizeMenu, setMinimizeMenu] = useState(false);
   const [activeIcon, setActiveIcon] = useState("Mobile App");
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 450) {
+         setMinimizeMenu(true);
+      }
+      else {
+        setMinimizeMenu(false)
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial call to set the initial value
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const menuItems = [
     {
